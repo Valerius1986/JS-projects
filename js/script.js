@@ -29,18 +29,19 @@ for (let i = 0; i < 2; i++) {
           starCount = prompt('На сколько оцените его?', ''); 
     if (movieCount != null && starCount != null && movieCount != '' && starCount != '' && movieCount.length < 50) {
         personalMovieDB.movies[movieCount] = starCount; 
-        console.log('Done!');
     } else {
-        console.log('Error');
         i--;
-    }
-        
-
-    
+    }   
 }
 
-
-
-
+if (personalMovieDB.count <= 10) {
+    alert('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+    alert('Вы классический зритель');
+} else if (personalMovieDB.count > 30) {
+    alert('Вы киноман');
+} else {
+    alert('Произошла ошибка');
+}
 
 console.log(personalMovieDB);
