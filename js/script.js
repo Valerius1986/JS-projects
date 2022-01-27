@@ -28,7 +28,6 @@ for (let i = 0; i < 2; i++) {
     const movieCount = prompt('Один из последних просмотренных фильмов?', ''),
           starCount = prompt('На сколько оцените его?', ''); 
     if (movieCount != null && starCount != null && movieCount != '' && starCount != '' && movieCount.length < 50) {
-        debugger;
         personalMovieDB.movies[movieCount] = starCount; 
         console.log('Done!');
     } else {
