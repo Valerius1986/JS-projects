@@ -33,3 +33,12 @@ const personalMovieDB = {
     privat: false,
 };
 
+const movieCount = prompt('Один из последних просмотренных фильмов?', ""),
+      starCount = prompt('На сколько оцените его?', ""),
+      movieCount2 = prompt('Один из последних просмотренных фильмов?', ""),
+      starCount2 = prompt('На сколько оцените его?', "");
+
+personalMovieDB.movies[movieCount] = starCount;
+personalMovieDB.movies[movieCount2] = starCount2;
+
+console.log(personalMovieDB);
